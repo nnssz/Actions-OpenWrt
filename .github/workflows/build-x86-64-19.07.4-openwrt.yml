@@ -14,8 +14,8 @@ on:
   workflow_dispatch:
 #  release:
 #    types: published
-  schedule:
-    - cron: 0 18 */4 * *
+#  schedule:
+#    - cron: 0 18 */4 * *
 #  watch:
 #    types: started
 
