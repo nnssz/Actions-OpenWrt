@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: v19.07.4
-  CONFIG_FILE: config/offical/x86-64/x86-64-offical-target.config
+  CONFIG_FILE: target.config
   DEVICE: openwrt-x86-64
   DIY_SH: scripts/offical-openwrt.sh
   IPV6MOD_IN_FIRMWARE: false
@@ -74,7 +74,7 @@ jobs:
       run: |
         [ -e files ] && mv files $OPENWRTROOT/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRTROOT/.config
-        cat config/offical/x86-64/x86-64-official-extra.config >> $OPENWRTROOT/.config
+        cat extra.config >> $OPENWRTROOT/.config
         chmod +x scripts/*.sh
         cd $OPENWRTROOT
         ../$DIY_SH
